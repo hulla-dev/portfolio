@@ -1,10 +1,14 @@
 import type { NextPage } from 'next'
+import Image from 'next/image'
+import staticImage from '../public/background.png'
 
 const Home: NextPage = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world
-    </h1>
+    <section>
+      <Image src={staticImage} alt="Staticly served background" />
+      <p>this is fucked</p>
+      <Image src="/BackdropLevel4.png" layout="fill" alt="Pls work" />
+    </section>
   )
 }
 

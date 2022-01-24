@@ -4,7 +4,10 @@ const nextConfig = {
   experimental: {
     concurrentFeatures: true,
     serverComponents: true,
-  }
+  },
+  // images: {
+  //   formats: ['image/avif', 'image/webp']
+  // }
 }
 
 module.exports = nextConfig

@@ -5,9 +5,9 @@ const nextConfig = {
     concurrentFeatures: true,
     serverComponents: true,
   },
-  // images: {
-  //   formats: ['image/avif', 'image/webp']
-  // }
+  images: {
+    formats: ['image/avif', 'image/webp']
+  }
 }
 
 module.exports = nextConfig

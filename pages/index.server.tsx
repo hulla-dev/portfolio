@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <section>
       <Image src={staticImage} alt="Staticly served background" />
       <p>this is fucked</p>
-      <Image src="/BackdropLevel4.png" layout="fill" alt="Pls work" />
+      <Image src="/background.png" layout="fill" alt="Pls work" />
     </section>
   )
 }

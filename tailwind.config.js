@@ -4,13 +4,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      transparent: "transparent",
-    },
     backgroundColor: {
       main: '#0c0708',
     },
-    extend: {},
+    extend: {
+      screens: {
+        'qhd': '2560px',
+      }
+    },
   },
   plugins: [],
 }

@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import Parallax from '../components/Parallax.client'
+import Page from '../components/Page.server'
 
 const Home: NextPage = () => {
   return (
-    <main className="w-full h-[120rem] bg-main">
+    <Page title="Welcome to my Portfolio">
       <Parallax />
-    </main>
+    </Page>
   )
 }
 

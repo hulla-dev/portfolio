@@ -5,9 +5,11 @@ type Props = {
 }
 
 const Content = ({ children }: Props) => (
-  <section id="content" className="flex justify-center max-w-[1920px]">
-    {children}
-  </section> 
+  <div className="flex justify-center w-full">
+    <section id="content" className="px-[10rem] w-full max-w-[1920px]">
+      {children}
+    </section>  
+  </div> 
 )
 
 export default Content

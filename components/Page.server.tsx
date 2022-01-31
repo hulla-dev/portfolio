@@ -10,17 +10,18 @@ type Props = {
 
 const Page = ({ children, header, title }: Props) => (
   <Fragment>
+    {/* Page head meta */}
     <Head title={title} />
+    {/* Header if provided */}
     {header && (
       <header className="bg-main">
         {header}
       </header>
     )}
-    <div className="flex justify-center bg-main w-full h-full">
-      <main className="w-full bg-main max-w-[2560px]">
-        {children}
-      </main>
-    </div>
+    {/* We intentionally leave out width restrictions for styling reasons (i.e. we want fluent 4k effects) */}
+    <main className="bg-main w-full h-full">
+      {children}
+    </main>
   </Fragment>
 )
 

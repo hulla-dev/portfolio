@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "buildcss": "npx tailwindcss -o build.css --minify"
+    "buildcss": "npx tailwindcss -o build.css --minify",
+    "ci": "yarn install --immutable --immutable-cache --check-cache"
   },
   "dependencies": {
     "framer-motion": "6.2.1",

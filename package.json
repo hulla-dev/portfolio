@@ -5,9 +5,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "buildcss": "npx tailwindcss -o build.css --minify"
   },
   "dependencies": {
+    "framer-motion": "6.2.1",
     "next": "12.0.8",
     "react": "18.0.0-rc.0",
     "react-dom": "18.0.0-rc.0"

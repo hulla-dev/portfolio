@@ -4,13 +4,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    backgroundColor: {
-      main: '#0c0708',
-    },
     extend: {
       screens: {
         'qhd': '2560px',
-      }
+      },
+      backgroundColor: {
+        main: '#0C0809',
+      },
     },
   },
   plugins: [],

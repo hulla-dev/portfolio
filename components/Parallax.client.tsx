@@ -26,7 +26,6 @@ const AnimatedLayer = (props: Props) => {
     src,
     alt,
     scrollY,
-    extended = false,
     bg = false,
   } = props
 
@@ -44,9 +43,7 @@ const AnimatedLayer = (props: Props) => {
   return (
     <motion.figure style={{ y }} className="w-full absolute z-1">
       <Image layout="responsive" src={src} alt={alt} />
-      {extended && (
-        <motion.div className="w-full relative bg-main h-[350px] z-10" />
-      )}
+      <div className="w-full relative bg-main h-[350px] z-10" />
     </motion.figure>
   )
 }
@@ -54,7 +51,7 @@ const AnimatedLayer = (props: Props) => {
 const Parallax = () => {
   const { scrollY } = useViewportScroll()
   return (
-    <section id="parallax" className="overflow-y-hidden relative block w-full h-[1210px] z-10">
+    <section id="parallax" className="overflow-y-hidden relative block w-full z-10 h-[300px] md:h-[700px] lg:h-[900px] xl:h-[1200px] 2xl:h-[1800px] qhd:h-[2500px]">
       <AnimatedLayer scrollY={scrollY} src={background} bg alt="background" speed={1} />
       <AnimatedLayer scrollY={scrollY} src={stars} alt="stars" speed={0.8} />
       <AnimatedLayer scrollY={scrollY} src={moon} alt="moon" speed={1.5} />
@@ -63,7 +60,7 @@ const Parallax = () => {
       <AnimatedLayer scrollY={scrollY} src={surfaceLevel3} alt="surfaceLevel3" speed={0.9} />
       <AnimatedLayer scrollY={scrollY} src={surfaceLevel2} alt="surfaceLevel2" speed={0.6} />
       <AnimatedLayer scrollY={scrollY} src={surfaceLevel1} alt="surfaceLevel1" speed={0.3} />
-      <AnimatedLayer scrollY={scrollY} src={surfaceLevel0} alt="surfaceLevel0" speed={0.2} extended />
+      <AnimatedLayer scrollY={scrollY} src={surfaceLevel0} alt="surfaceLevel0" speed={0.2} />
     </section>
   )
 }

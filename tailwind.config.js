@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       screens: {
         'qhd': '2560px',
+        'uhd': '2048px'
       },
       backgroundColor: {
         main: '#0C0809',

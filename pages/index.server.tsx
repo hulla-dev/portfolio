@@ -4,9 +4,12 @@ import Page from '../components/Page.server'
 
 const Home: NextPage = () => {
   return (
-    <Page title="Welcome to my Portfolio">
-      <Parallax />
-    </Page>
+    <div className="h-[4000px]">
+      <Page title="Welcome to my Portfolio">
+        <Parallax />
+        <h1 className="text-white text-xl">Hello world</h1>
+      </Page>
+    </div>
   )
 }
 

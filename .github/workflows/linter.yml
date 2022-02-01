@@ -2,6 +2,8 @@ name: Lint the newly added code
 
 on:
   push:
+    branches:
+      - "master"
 
 jobs:
   run-linters:

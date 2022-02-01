@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { motion, MotionValue, useTransform, useViewportScroll } from 'framer-motion'
+import { MotionValue, motion, useTransform, useViewportScroll } from 'framer-motion'
 /* ------------------------------ Image imports ----------------------------- */
 import background from '../public/parallax/background.png'
 import stars from '../public/parallax/stars.png'
@@ -17,7 +17,7 @@ type Props = {
   src: StaticImageData,
   alt: string,
   scrollY: MotionValue<number>,
-  customStyle?: Object,
+  customStyle?: Record<string, unknown>,
   bg?: boolean,
   screenWidth: number,
 }
@@ -77,7 +77,7 @@ const Parallax = () => {
       onResizeChange()
       // And we add a resize listener in case the user ever swaps screens
       window.addEventListener('resize', onResizeChange)
-      // And we can't forget to unsubscribe from event listener on unmount
+      // And we can't forget to unsubscribe from event listener on un-mount
       return window.removeEventListener('resizeWatcher', onResizeChange)
     }
   }, [])

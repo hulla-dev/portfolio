@@ -16,7 +16,7 @@ export const useScreenSize = () => {
       // We call it once to initially get the screen size
       onResizeChange()
       // And we add a resize listener in case the user ever swaps screens
-      window.addEventListener('resize', onResizeChange)
+      window.addEventListener('resizeWatcher', onResizeChange)
       // And we can't forget to unsubscribe from event listener on un-mount
       return window.removeEventListener('resizeWatcher', onResizeChange)
     }

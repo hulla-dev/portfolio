@@ -1,10 +1,7 @@
-import Image from 'next/image'
 import {
-  MotionValue,
-  motion,
-  useTransform,
   useViewportScroll,
 } from 'framer-motion'
+import AnimatedLayer from './AnimatedLayer.client'
 /* ------------------------------ Image imports ----------------------------- */
 import background from '../public/parallax/background.png'
 import stars from '../public/parallax/stars.png'
@@ -18,51 +15,6 @@ import surfaceLevel4 from '../public/parallax/surfaceLevel4.png'
 /* ------------------------------ Internal API ------------------------------ */
 import { useScreenSize } from '../lib/useScreenSize'
 
-type Props = {
-  speed: number
-  src: StaticImageData
-  alt: string
-  scrollY: MotionValue<number>
-  customStyle?: Record<string, unknown>
-  bg?: boolean
-  screenWidth: number
-}
-
-/* ------------------------ Animated Component Layer ------------------------ */
-const AnimatedLayer = (props: Props) => {
-  const {
-    speed,
-    src,
-    alt,
-    scrollY,
-    bg = false,
-    screenWidth,
-    customStyle = {},
-  } = props
-
-  const inputRange = [0, 400, 500, 700]
-  const outputRange = bg ? inputRange : [0, 400, 550, 600]
-  const applySpeed = (array: number[]) => array.map((x) => x * speed)
-
-  const y = useTransform(scrollY, inputRange, applySpeed(outputRange))
-
-  const style = { ...customStyle, y }
-
-  if (screenWidth >= 2560) {
-    return (
-      <figure className="z-1 absolute w-full">
-        <Image layout="responsive" src={src} alt={alt} />
-      </figure>
-    )
-  }
-
-  return (
-    <motion.figure style={style} className="z-1 absolute w-full">
-      <Image layout="responsive" src={src} alt={alt} />
-      <div className="relative z-10 h-[350px] w-full bg-main" />
-    </motion.figure>
-  )
-}
 
 /* ---- Complete Parallax section consisting of multiple animated layers ---- */
 const Parallax = () => {

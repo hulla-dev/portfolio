@@ -1,4 +1,5 @@
 import { MotionValue, motion, useTransform } from 'framer-motion'
+import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
 
 type Props = {

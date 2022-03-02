@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "framer-motion": "6.2.1",
-    "next": "12.1.0",
+    "next": "^12.1.1-canary.4",
     "react": "18.0.0-rc.0",
     "react-dom": "18.0.0-rc.0"
   },

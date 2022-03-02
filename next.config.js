@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    concurrentFeatures: true,
     serverComponents: true,
     outputStandalone: true,
-    runtime: true,
+    runtime: 'edge',
   },
   images: {
     formats: ['image/avif', 'image/webp'],

@@ -24,7 +24,8 @@
     "prefer-const": "error",
     "react/react-in-jsx-scope": "off", //obsolete, not longer required in newer react versions
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/ban-ts-comment": "off"
   },
   "settings": {
     "react": {

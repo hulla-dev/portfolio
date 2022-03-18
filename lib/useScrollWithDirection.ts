@@ -21,30 +21,30 @@ type AnimatedScrollState = {
  * **This should only be used when you need to update scrollDirection**
  */
 export const useScrollWithDirection = (defaultValue: ScrollDirection = 'down'): AnimatedScrollState => {
-  const motionScroll = useViewportScroll()
-  const [scrollControl, setScrollControl] = useState<ScrollState>({
-    scrollY: motionScroll.scrollYProgress.get(),
-    scrollDirection: defaultValue,
-  })
+	const motionScroll = useViewportScroll()
+	const [scrollControl, setScrollControl] = useState<ScrollState>({
+		scrollY: motionScroll.scrollYProgress.get(),
+		scrollDirection: defaultValue,
+	})
 
-  useEffect(() => {
-    // Updater function for scrollDirection
-    const updateScrollDirection = () => {
-      // Note - no eventListener is necessary as motion ships it's own subscription
-      const newScrollY = motionScroll.scrollYProgress.get()
-      setScrollControl(
-        ({ scrollY: prevScrollY }) => newScrollY > prevScrollY
-          ? { scrollY: newScrollY, scrollDirection: 'down', }
-          : { scrollY: newScrollY, scrollDirection: 'up', }
-      )
-    }
-    return motionScroll.scrollYProgress.onChange(updateScrollDirection)
-  }, [motionScroll.scrollYProgress])
+	useEffect(() => {
+		// Updater function for scrollDirection
+		const updateScrollDirection = () => {
+			// Note - no eventListener is necessary as motion ships it's own subscription
+			const newScrollY = motionScroll.scrollYProgress.get()
+			setScrollControl(
+				({ scrollY: prevScrollY }) => newScrollY > prevScrollY
+					? { scrollY: newScrollY, scrollDirection: 'down', }
+					: { scrollY: newScrollY, scrollDirection: 'up', }
+			)
+		}
+		return motionScroll.scrollYProgress.onChange(updateScrollDirection)
+	}, [motionScroll.scrollYProgress])
 
-  return {
-    ...motionScroll,
-    scrollDirection: scrollControl.scrollDirection
-  }
+	return {
+		...motionScroll,
+		scrollDirection: scrollControl.scrollDirection
+	}
 }
 
 export default useScrollWithDirection

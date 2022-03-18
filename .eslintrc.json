@@ -17,6 +17,7 @@
   "rules": {
     "func-style": ["error", "expression"],
     "no-console": ["error", { "allow": ["warn", "error"]}],
+    "indent": ["error", "tab"],
     "sort-imports": [
       "error",
       { "memberSyntaxSortOrder": ["all", "single", "multiple", "none"], "ignoreDeclarationSort": true }
@@ -25,7 +26,14 @@
     "react/react-in-jsx-scope": "off", //obsolete, not longer required in newer react versions
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-empty-function": "off"
   },
   "settings": {
     "react": {

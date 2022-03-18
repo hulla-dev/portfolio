@@ -12,17 +12,17 @@ type ContentProps = {
 
 
 const NavContent = ({ items }: ContentProps) => {
-	return (
-		<motion.ul className="flex flex-row h-full">
-			{items.map(({ href, name }) => (
-				<motion.li key={name}>
-					<Link href={href}>
-						<a>{name}</a>
-					</Link>
-				</motion.li>
-			))}
-		</motion.ul>
-	)
+  return (
+    <motion.ul className="flex flex-row h-full">
+      {items.map(({ href, name }) => (
+        <motion.li key={name}>
+          <Link href={href}>
+            <a>{name}</a>
+          </Link>
+        </motion.li>
+      ))}
+    </motion.ul>
+  )
 }
 
 export default NavContent

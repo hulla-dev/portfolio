@@ -17,7 +17,7 @@
   "rules": {
     "func-style": ["error", "expression"],
     "no-console": ["error", { "allow": ["warn", "error"]}],
-    "indent": ["error", "tab"],
+    "indent": ["error", 2],
     "sort-imports": [
       "error",
       { "memberSyntaxSortOrder": ["all", "single", "multiple", "none"], "ignoreDeclarationSort": true }

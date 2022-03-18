@@ -7,21 +7,21 @@ import { useEffect, useState } from 'react'
  * @returns `{ x: window.innerWidth, y: window.innerHeight }`
  */
 export const useScreenSize = () => {
-	const [dimensions, setDimensions] = useState({ x: 0, y: 0 })
-	useEffect(() => {
-		if (window && typeof window !== undefined) {
-			const onResizeChange = () => {
-				setDimensions({ x: window.innerWidth, y: window.innerHeight })
-			}
-			// We call it once to initially get the screen size
-			onResizeChange()
-			// And we add a resize listener in case the user ever swaps screens
-			window.addEventListener('resizeWatcher', onResizeChange)
-			// And we can't forget to unsubscribe from event listener on un-mount
-			return window.removeEventListener('resizeWatcher', onResizeChange)
-		}
-	}, [])
-	return dimensions
+  const [dimensions, setDimensions] = useState({ x: 0, y: 0 })
+  useEffect(() => {
+    if (window && typeof window !== undefined) {
+      const onResizeChange = () => {
+        setDimensions({ x: window.innerWidth, y: window.innerHeight })
+      }
+      // We call it once to initially get the screen size
+      onResizeChange()
+      // And we add a resize listener in case the user ever swaps screens
+      window.addEventListener('resizeWatcher', onResizeChange)
+      // And we can't forget to unsubscribe from event listener on un-mount
+      return window.removeEventListener('resizeWatcher', onResizeChange)
+    }
+  }, [])
+  return dimensions
 }
 
 export default useScreenSize

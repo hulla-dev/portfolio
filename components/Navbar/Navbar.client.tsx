@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { MotionValue, motion, useTransform } from 'framer-motion'
 import NavContent, { ItemProps } from "./NavContent"
 import { useScrollWithDirection } from '../../lib/useScrollWithDirection'
@@ -34,17 +33,22 @@ const Navbar = () => {
   const { scrollDirection, scrollYProgress } = useScrollWithDirection()
 
   /* ------------------------------ Nav animation ----------------------------- */
-  const scrollDownOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
-  const scrollUpOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 1])
+  const scrollDownOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
+  const scrollUpOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 1])
 
   const opacity = scrollDirection === 'down' ? scrollDownOpacity : scrollUpOpacity
 
   /* --------------------------- Backdrop animation --------------------------- */
   const variants = {
     visible: (scrollProgress: MotionValue<number>) => ({
-      opacity: scrollProgress.get() < 0.01 ? 0 : 1,
+      opacity: scrollProgress.get() < 0.03 ? 0 : 1,
+      y: 0,
+      transition: {
+        bounce: 0.25,
+      }
     }),
     hidden: {
+      y: -80,
       opacity: 0,
     }
   }
@@ -52,7 +56,7 @@ const Navbar = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 right-0 z-20 h-28 bg-light"
+        className="fixed top-0 left-0 right-0 z-20 h-28 bg-primary drop-shadow-xl"
         initial="hidden"
         animate={scrollDirection === 'down' ? 'hidden' : 'visible'}
         variants={variants}

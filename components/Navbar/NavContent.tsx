@@ -15,9 +15,9 @@ const NavContent = ({ items }: ContentProps) => {
   return (
     <motion.ul className="flex flex-row h-full">
       {items.map(({ href, name }) => (
-        <motion.li key={name}>
+        <motion.li className="flex flex-row align-center px-5" key={name}>
           <Link href={href}>
-            <a>{name}</a>
+            <a className="mt-10 text-lg uppercase text-text">{name}</a>
           </Link>
         </motion.li>
       ))}

@@ -6,6 +6,7 @@ const Home: NextPage = () => {
   return (
     <div className="h-[4000px]">
       <Page title="Welcome to my Portfolio" header={<Parallax />}>
+        <p>example</p>
       </Page>
     </div>
   )

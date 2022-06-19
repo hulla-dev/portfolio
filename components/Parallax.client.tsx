@@ -1,6 +1,4 @@
-import {
-  useViewportScroll,
-} from 'framer-motion'
+import { useViewportScroll } from 'framer-motion'
 import AnimatedLayer from './AnimatedLayer.client'
 /* ------------------------------ Image imports ----------------------------- */
 import background from '../public/parallax/background.png'
@@ -15,7 +13,6 @@ import surfaceLevel4 from '../public/parallax/surfaceLevel4.png'
 /* ------------------------------ Internal API ------------------------------ */
 import { useScreenSize } from '../lib/useScreenSize'
 
-
 /* ---- Complete Parallax section consisting of multiple animated layers ---- */
 const Parallax = () => {
   const { scrollY } = useViewportScroll()
@@ -24,7 +21,7 @@ const Parallax = () => {
   return (
     <section
       id="parallax"
-      className="relative z-10 block h-[400px] w-full overflow-y-hidden md:h-[750px] lg:h-[900px] xl:h-[1280px] qhd:h-[1900px] uhd:h-[1900px]">
+      className="relative z-10 block h-[400px] w-full overflow-y-hidden md:h-[750px] lg:h-[900px] xl:h-[1280px] qhd:h-[1900px]">
       <AnimatedLayer
         screenWidth={screenWidth}
         scrollY={scrollY}

@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 export const useScreenSize = () => {
   const [dimensions, setDimensions] = useState({ x: 0, y: 0 })
   useEffect(() => {
-    if (window && typeof window !== undefined) {
+    if (window && typeof window !== typeof undefined) {
       const onResizeChange = () => {
         setDimensions({ x: window.innerWidth, y: window.innerHeight })
       }

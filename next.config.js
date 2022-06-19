@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     serverComponents: true,
@@ -8,7 +7,7 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
-  swcMinify: true
+  swcMinify: true,
 }
 
 module.exports = nextConfig

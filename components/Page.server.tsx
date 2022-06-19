@@ -1,27 +1,24 @@
 import type { ReactChild, ReactNode } from 'react'
 import { Fragment } from 'react'
-import Head from '../components/Head.client'
+import Navbar from './Navbar/Navbar.client'
+import Head from './Head.client'
 
 type Props = {
-  children: ReactNode,
+  children: ReactNode
   header?: ReactChild
-  title: string,
+  title: string
 }
 
 const Page = ({ children, header, title }: Props) => (
   <Fragment>
     {/* Page head meta */}
     <Head title={title} />
+    {/* Navbar */}
+    <Navbar />
     {/* Header if provided */}
-    {header && (
-      <header className="bg-main">
-        {header}
-      </header>
-    )}
+    {header && <header className="bg-main">{header}</header>}
     {/* We intentionally leave out width restrictions for styling reasons (i.e. we want fluent 4k effects) */}
-    <main className="bg-main w-full h-full">
-      {children}
-    </main>
+    <main className="min-h-full w-full bg-main">{children}</main>
   </Fragment>
 )
 

@@ -1,7 +1,7 @@
 import NextHead from 'next/head'
 
 type Props = {
-  title: string,
+  title: string
 }
 
 const Head = ({ title }: Props) => (

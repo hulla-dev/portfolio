@@ -1,7 +1,7 @@
 import type { ReactChild, ReactNode } from 'react'
 import { Fragment } from 'react'
 import Navbar from './Navbar/Navbar.client'
-import Head from '../components/Head.client'
+import Head from './Head.client'
 
 type Props = {
   children: ReactNode

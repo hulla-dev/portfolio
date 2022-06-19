@@ -11,15 +11,15 @@ module.exports = {
       },
       colors: {
         main: '#0c0809',
-        text: '#edf2f4',
-        textSecondary: '#8d99ae',
-        primary: '#d90429',
-        primaryLight: '#ef233c',
-        shadow: 'rgb(33,21,23)',
+        content: '#171717',
+        primary: '#0DAB76',
+        light: '#fff',
+      },
+      textColor: {
+        main: '#fff',
+        placeholder: '#595959',
       },
     },
   },
-  plugins: [
-
-  ],
+  plugins: [require('@tailwindcss/typography')],
 }

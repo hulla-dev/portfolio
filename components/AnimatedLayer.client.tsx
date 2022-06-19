@@ -25,7 +25,7 @@ const AnimatedLayer = (props: Props) => {
 
   const inputRange = [0, 400, 500, 700]
   const outputRange = bg ? inputRange : [0, 400, 550, 600]
-  const applySpeed = (array: number[]) => array.map((x) => x * speed)
+  const applySpeed = (array: number[]) => array.map(x => x * speed)
 
   const y = useTransform(scrollY, inputRange, applySpeed(outputRange))
 

@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-main;
+    font-family: Inter var, Inter, Roboto, system-ui, sans-serif;
+  }
+  h1 {
+    @apply text-8xl font-semibold;
+  }
+  h2 {
+    @apply text-7xl font-semibold;
+  }
+  h3 {
+    @apply text-5xl font-semibold;
+  }
+  h4 {
+    @apply text-4xl font-semibold;
+  }
+  h5 {
+    @apply text-2xl font-semibold;
+  }
+  h6 {
+    @apply text-xl font-semibold;
+  }
+}

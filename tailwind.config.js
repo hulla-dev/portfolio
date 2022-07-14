@@ -13,6 +13,7 @@ module.exports = {
         main: '#0c0809',
         content: '#171717',
         primary: '#0DAB76',
+        primaryDark: '#059c69',
         light: '#fff',
       },
       textColor: {

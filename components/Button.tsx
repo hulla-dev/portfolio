@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Image, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
 import clsx from 'clsx'
 
 type Props = {
@@ -18,7 +18,6 @@ const Button = (props: Props) => {
   const {
     children,
     onClick,
-    icon,
     variant = 'default',
     disabled = false,
     className = '',
